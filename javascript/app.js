@@ -1,5 +1,16 @@
 const urlParams = new URLSearchParams(window.location.search);
-document.getElementById("nombre1Value").innerHTML = urlParams.get('nombre1');
+var i=1;
+for (var atributo of urlParams){
+    document.getElementById("value"+i).innerHTML = atributo[1];
+    i++;
+}
+
+
+
+
+
+
+/*document.getElementById("nombre1Value").innerHTML = urlParams.get('nombre1');
 document.getElementById("apellido1Value").innerHTML = urlParams.get('apellido1');
 document.getElementById("codigo1Value").innerHTML = urlParams.get('codigo1');
 document.getElementById("nombre2Value").innerHTML = urlParams.get('nombre2');
@@ -13,7 +24,7 @@ document.getElementById("apellido4Value").innerHTML = urlParams.get('apellido4')
 document.getElementById("codigo4Value").innerHTML = urlParams.get('codigo4');
 document.getElementById("nombre5Value").innerHTML = urlParams.get('nombre5');
 document.getElementById("apellido5Value").innerHTML = urlParams.get('apellido5');
-document.getElementById("codigo5Value").innerHTML = urlParams.get('codigo5');
+document.getElementById("codigo5Value").innerHTML = urlParams.get('codigo5');*/
 
 
 
