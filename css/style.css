@@ -1,0 +1,65 @@
+body {
+    background: rgba(194, 239, 240, 0.5);/*Fondo*/
+}
+h1{
+    width: 800px;/*Tamaño del bloque header*/
+    text-align: center;/*Centrar texto*/
+}
+table {
+    border:1px;/*Borde exterior*/
+    border-collapse: collapse;/*Borde relleno*/
+    width: 800px; /*Ancho de mi tabla*/
+}
+table td{
+    border:1px solid #000000;/*borde solido interior*/
+    padding: 2px 5px;/*margen interno*/
+    text-align: center;/*centrar*/
+    width: 190px;/*tamaño de las casillas de ancho*/
+}
+input[type="text"]{/*trabaja sobre input tipo texto*/
+    background: #ffffff;/*Fondo blanco*/
+    text-align: center;/*Centrar texto*/
+    padding: 5px;/*margen interno*/
+    width: 100%;/*la caja ocupa el 100% de ancho*/
+    box-sizing: border-box;/*no le suma el padding al ancho*/
+    font-size: 15px;/*tamaño de la fuente*/
+    border: 1px solid #cccccc;/*berde de la caja*/
+}
+input:focus{/*focus es para cuando doy click*/
+    border: 1px solid #1668C4;/*Cambia el color del borde*/
+}
+
+input[type="submit"]{/*input tipo submit (boton)*/
+    background: #1668C4;/*color de fondo*/
+    color:#ffffff;/*color de la fuente*/
+    border: none;/*anulo el borde*/
+    width: 50%;/*ancho*/
+    height: 40px;/*alto*/
+    padding: 5px;/*margen interno*/
+}
+
+input[type="submit"]:hover{/*se ejecuta cuando se pone el mouse encima*/
+    background: #4A88F4;/*fondo*/
+    cursor: pointer;/*cambia el cursor a una mano*/
+}
+
+div p{/*Parrafo*/
+    text-align: justify;/*justifica el parrafo*/
+    font-family: cursive;/*tipografía cursiva*/
+    font-size: 16px;/*tamaño de la letra*/
+}
+div a:link{/*link*/
+    font-family: monospace;/*tipografía*/
+    font-size: 25px;/*tamaño de la letra*/
+    color: #1668C4;/*color de la letra*/
+    text-decoration: none;/*anulo la decoración*/
+    margin: 10px 20px 10px 0px;/*margenes tipo hora*/
+}
+div a:visited{/*link ya visitado*/
+    color: #1668C4;/*color de la fuente*/
+}
+div a:hover{/*link cuando le pongo el mouse encima*/
+    text-decoration: underline;/*pone línea abajo*/
+    background: #000000;/*fondo*/
+    color: #ffffff;/*color de letra*/
+}
