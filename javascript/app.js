@@ -6,17 +6,23 @@ for (var atributo of urlParams){//al atributo le asigno el valor correspondiente
 }
 
 
-function validar(){
+function validar(event){
+    
     var f=false;
     for (var i=1; i<16; i++){
         var comprobar=document.getElementById("value"+i).value;//a la variable comprobar le asigno lo que hay en cada casilla
         if (comprobar.length==0){//compruebo que el tamaño no sea nulo
             f=true;//si es nulo f pasa a ser tru
             break;//se acaba el for
+            
         }
+        
     }
     if (f===false){
     document.formulario.action="HolaMundo2.html";//le asigno la acción al formulario por medio de su nombre (formulario)
+    }
+    if (f===true){
+        event.preventDefault();
     }
 }
 
