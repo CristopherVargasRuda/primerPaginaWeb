@@ -11,7 +11,8 @@ function validar(event){
     for (var i=1; i<16; i++){
         var comprobar=document.getElementById("value"+i).value;//a la variable comprobar le asigno lo que hay en cada casilla
         if (comprobar.length==0){//compruebo que el tamaño no sea nulo
-            f=true;//si es nulo f pasa a ser tru
+            f=true;//si es nulo f pasa a ser true
+            alert("Rellene toda la tabla")
             break;//se acaba el for
         }
     }

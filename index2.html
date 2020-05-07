@@ -21,6 +21,25 @@
 				color: #1668C4;
 			}
 		</style>
+		<script>
+			function validar(event){
+				var f=false;
+				for (var i=1; i<16; i++){
+					var comprobar=document.getElementById("value"+i).value;//a la variable comprobar le asigno lo que hay en cada casilla
+					if (comprobar.length==0){//compruebo que el tamaño no sea nulo
+						f=true;//si es nulo f pasa a ser true
+						alert("Rellene toda la tabla")
+						break;//se acaba el for
+					}
+				}
+				if (f===false){
+				document.formulario.action="HolaMundo2.html";//le asigno la acción al formulario por medio de su nombre (formulario)
+				}
+				if (f===true){
+					event.preventDefault();//no deja refrescar la pagina al presionar el botón 
+				}
+			}
+		</script>
     </head>
     <body style="background: rgba(194, 239, 240, 0.5);">
 		<header>
@@ -143,5 +162,4 @@
 			</div>	
 		</form>
     </body>
-	<script type="text/javascript" src="./javascript/app.js"></script>
 </HTML>
