@@ -1,12 +1,33 @@
 const urlParams = new URLSearchParams(window.location.search);//me guarda la url en parejas value#="lo que venía en la casilla"
 var i=1;
 for (var atributo of urlParams){//al atributo le asigno el valor correspondiente a cada iteración 
-    document.getElementById("input"+i).innerHTML = atributo[1];//a través el ID asigo el valor que se encuentra en la posición 1 de cada arreglo es decir "lo que venía en cada casilla"
+    document.getElementById("value"+i).innerHTML = atributo[1];//a través el ID asigo el valor que se encuentra en la posición 1 de cada arreglo es decir "lo que venía en cada casilla"
     i++;
 }
 
 
 function validar(event){
+    var f=true;
+    for (var i=1; i<16; i++){
+        if (!document.getElementById("input"+i).value){//compruebo que el tamaño no sea nulo
+            f=false;//si es nulo f pasa a ser true
+            alert("Rellene toda la tabla")
+            event.preventDefault();//no deja refrescar la pagina al presionar el botón 
+            break;//se acaba el for
+        }
+    }
+    if (f){
+    document.formulario.action="HolaMundo2.html";//le asigno la acción al formulario por medio de su nombre (formulario)
+    }
+}
+
+// urlParams = {
+//     nombre1: "Cristopher",
+//     apellido1: "Vargas",
+// }
+
+
+/*function validar(event){
     var f=false;
     for (var i=1; i<16; i++){
         var comprobar=document.getElementById("value"+i).value;//a la variable comprobar le asigno lo que hay en cada casilla
@@ -22,9 +43,7 @@ function validar(event){
     if (f===true){
         event.preventDefault();//no deja refrescar la pagina al presionar el botón 
     }
-}
-
-
+}*/
 
 
 /*document.getElementById("nombre1Value").innerHTML = urlParams.get('nombre1');
@@ -52,10 +71,7 @@ document.getElementById("codigo5Value").innerHTML = urlParams.get('codigo5');*/
 
 
 
-// urlParams = {
-//     nombre1: "Cristopher",
-//     apellido1: "apellido 1",
-// }
+
 
 
 
