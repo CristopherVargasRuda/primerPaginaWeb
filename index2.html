@@ -21,15 +21,12 @@
 				color: #1668C4;
 			}
 		</style>
-		<script>
-			
-		</script>
     </head>
     <body style="background: rgba(194, 239, 240, 0.5);">
 		<header>
 			<h1 style="width: 800px; text-align: center">Hola Mundo</h1>
 		</header>
-        <form action="HolaMundo2.html" >
+        <form name="formulario">
 			<table style="border:1px; border-collapse:collapse; width: 800px">
 				<tr>					
 					<td style="border:1px solid #000000; padding: 2px 5px; text-align: center; width: 190px">
@@ -96,7 +93,7 @@
 							padding: 5px; width: 100%; box-sizing: border-box; font-size: 15px; border: 1px solid #cccccc"></input></h3>
 					</td>		
 					<td style="border:1px solid #000000; padding: 2px 5px; text-align: center; width: 190px">
-						<h3><input type="text" value="apellido 4" name="value11" id="value12" style="background: #ffffff; text-align: center; 
+						<h3><input type="text" value="apellido 4" name="value11" id="value11" style="background: #ffffff; text-align: center; 
 							padding: 5px; width: 100%; box-sizing: border-box; font-size: 15px; border: 1px solid #cccccc"></h3>
 					</td>
 					<td style="border:1px solid #000000; padding: 2px 5px; text-align: center; width: 190px">
@@ -120,7 +117,7 @@
 				</tr>
 				<tr>
 					<td colspan='4' style="border:1px solid #000000; padding: 2px 5px; text-align: center; width: 190px">	
-						<input type="submit" class="boton" value="Enviar Datos" style="background: #1668C4; color:#ffffff; border: none;
+						<input type="submit" class="boton" value="Enviar Datos" onclick="validar(event)" style="background: #1668C4; color:#ffffff; border: none;
 						width: 50%; height: 40px; padding: 5px" >
 					</td>
 				</tr>
@@ -142,9 +139,9 @@
 					<br>
 				</p>
 				<a href="index.html" style="font-family: monospace; font-size: 25px; color: #1668C4;text-decoration: none;
-				margin: 10px 20px 10px 0px">Link para pasar a la pagina 2</a>
+				margin: 10px 20px 10px 0px">Link para pasar a la pagina 1</a>
 			</div>	
 		</form>
     </body>
-
+	<script type="text/javascript" src="./javascript/app.js"></script>
 </HTML>
