@@ -1,10 +1,24 @@
-const urlParams = new URLSearchParams(window.location.search);
+const urlParams = new URLSearchParams(window.location.search);//me guarda la url en parejas value#="lo que venía en la casilla"
 var i=1;
-for (var atributo of urlParams){
-    document.getElementById("value"+i).innerHTML = atributo[1];
+for (var atributo of urlParams){//al atributo le asigno el valor correspondiente a cada iteración 
+    document.getElementById("input"+i).innerHTML = atributo[1];//a través el ID asigo el valor que se encuentra en la posición 1 de cada arreglo es decir "lo que venía en cada casilla"
     i++;
 }
 
+
+function validar(){
+    var f=false;
+    for (var i=1; i<16; i++){
+        var comprobar=document.getElementById("value"+i).value;//a la variable comprobar le asigno lo que hay en cada casilla
+        if (comprobar.length==0){//compruebo que el tamaño no sea nulo
+            f=true;//si es nulo f pasa a ser tru
+            break;//se acaba el for
+        }
+    }
+    if (f===false){
+    document.formulario.action="HolaMundo2.html";//le asigno la acción al formulario por medio de su nombre (formulario)
+    }
+}
 
 
 
